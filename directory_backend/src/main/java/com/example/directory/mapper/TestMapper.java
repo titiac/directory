@@ -1,7 +1,5 @@
 package com.example.directory.mapper;
 
-
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.directory.bean.Test;
 import org.apache.ibatis.annotations.Mapper;
 

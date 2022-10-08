@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.directory.mapper.AllContactMapper">
+    <select id="getAllContact" resultType="com.example.directory.bean.Users">
+        select * from users;
+    </select>
+    <select id="getContactByDepId" resultType="com.example.directory.bean.ContactLab">
+        select id, name, tel, lab_id from users where lab_id = #{labId};
+    </select>
+</mapper>
