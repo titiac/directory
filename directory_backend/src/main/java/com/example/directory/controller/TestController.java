@@ -20,4 +20,9 @@ public class TestController {
     public List<Test> getAll(){
         return testService.getAll();
     }
+
+    @GetMapping("/test/hello")
+    public String get(){
+        return "success";
+    }
 }

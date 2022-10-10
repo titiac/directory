@@ -7,6 +7,11 @@ import MyInfo from '../views/user/MyInfo'
 
 const routes = [
   {
+    path: "",
+    name: "home",
+    redirect: "/all"
+  },
+  {
     path: "/all",
     name: "all_contacts",
     component: AllContacts,
@@ -31,6 +36,10 @@ const routes = [
     name: "404",
     component: NotFound,
   },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/404"
+  }
 ]
 
 const router = createRouter({
