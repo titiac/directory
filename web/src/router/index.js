@@ -4,6 +4,8 @@ import CollectContacts from '../views/collectContacts/CollectContacts'
 import NotFound from '../views/error/NotFound'
 import SearchName from '../views/search/SearchName'
 import MyInfo from '../views/user/MyInfo'
+import UserAccountLoginView from "../views/user/account/UserAccountLoginView"
+import UserAccountRegisterView from "../views/user/account/UserAccountRegisterView"
 
 const routes = [
   {
@@ -15,6 +17,16 @@ const routes = [
     path: "/all",
     name: "all_contacts",
     component: AllContacts,
+  },
+  {
+    path: "/user/login",
+    name: "user_login",
+    component: UserAccountLoginView,
+  },
+  {
+    path: "/user/register",
+    name: "user_register",
+    component: UserAccountRegisterView,
   },
   {
     path: "/collect",
