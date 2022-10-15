@@ -36,6 +36,24 @@ export default {
         let password = ref('');
         let error_message = ref('');
 
+        const jwt_token = localStorage.getItem('jwt_token'); // 取出之前存在浏览器中的token
+        if (jwt_token) {
+            store.commit("updateToken", jwt_token);
+            store.dispatch("getinfo", { // 用于判断token是否过期
+                success() {
+                    router.push({ name: "home" });
+                    // store.commit("updatePullingInfo", false);
+                },
+                error() {
+                    // store.commit("updatePullingInfo", false);
+                }
+            })
+
+        } else {
+            store.commit("updatePullingInfo", false);
+        }
+
+
         const login = () => {
             error_message.value = "";
             store.dispatch("login", {

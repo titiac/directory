@@ -23,7 +23,7 @@ public class RegisterServiceImpl implements RegisterService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public Map<String, String> register(String username, String password, String confirmedPassword, String tel) {
+    public Map<String, String> register(String username, String password, String confirmedPassword, String telephone) {
         Map<String, String> map = new HashMap<>();
         if (username == null) {
             map.put("error_message", "用户名不能为空");
@@ -67,7 +67,7 @@ public class RegisterServiceImpl implements RegisterService {
             return map;
         }
 
-        if(tel == null && tel.length() == 0){
+        if(telephone == null && telephone.length() == 0){
             map.put("error_message", "联系方式不能为空");
             return map;
         }
@@ -77,7 +77,7 @@ public class RegisterServiceImpl implements RegisterService {
         String name = "hhhh";
         String sex = "男";
         Date birthday = new Date();
-        Users user = new Users(null, username, encodedPassword, name, sex, birthday, null, 1, tel, 0);
+        Users user = new Users(null, username, encodedPassword, name, sex, birthday, null, 1, telephone, 0);
         userMapper.insert(user);
 
         map.put("error_message", "success");
