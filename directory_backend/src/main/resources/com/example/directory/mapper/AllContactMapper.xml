@@ -2,10 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.directory.mapper.AllContactMapper">
+    <insert id="addContact">
+        insert into contact(name, telephone, uid) values(#{name}, #{telephone}, #{uid});
+    </insert>
+
+    <update id="updateContact">
+        update contact set name = #{name}, telephone = #{telephone} where id = #{id};
+    </update>
+    <delete id="deleteContactById">
+        delete from contact where id = #{id};
+    </delete>
+
     <select id="getAllContact" resultType="com.example.directory.bean.Users">
         select * from users;
     </select>
     <select id="getContactByDepId" resultType="com.example.directory.bean.ContactLab">
         select id, name, tel, lab_id from users where lab_id = #{labId};
     </select>
+    <select id="getContactById" resultType="com.example.directory.bean.Contact">
+        select id, name, telephone, uid from contact where uid = #{id};
+    </select>
+    <select id="findContactId" resultType="com.example.directory.bean.Contact">
+        select * from contact where id = #{id};
+    </select>
+
 </mapper>
