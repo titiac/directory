@@ -16,10 +16,10 @@
                             所有联系人
                         </router-link>
                     </li>
-                    <li class="nav-item">
-                        <!-- <a class="nav-link" href="/collect">收藏联系人</a> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/collect">收藏联系人</a>
                         <router-link class="nav-link" :to="{name:'collect_contacts'}">收藏联系人</router-link>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- <form class="d-flex me-auto mb-2 mb-lg-0" role="search">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
