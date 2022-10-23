@@ -180,13 +180,13 @@ export default {
                 },
                 data: {
                     contactId: contact.id,
-                    name: contactadd.name,
-                    telephone: contactadd.telephone,
+                    name: contact.name,
+                    telephone: contact.telephone,
                 },
                 success(resp) {
                     if (resp.error_message === "success") {
-                        Modal.getInstance("#add_contact_btn").hide();
-
+                        Modal.getInstance("#update_contact_btn" + contact.id).hide();
+                        // :id="'update_contact_btn' + contact.id"
                         refresh_list();
                     } else {
                         contactadd.error_message = resp.error_message;

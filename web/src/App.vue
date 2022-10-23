@@ -17,8 +17,8 @@ export default {
 
 <style>
 body {
-  background-image: url(https://git.acwing.com/yxc/kob/-/raw/78b820fc5c389286259eba6d09bcd192c23caf91/web/src/assets/background.png);
+  background-image: url(https://w.wallhaven.cc/full/6d/wallhaven-6dqjdl.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 </style>
